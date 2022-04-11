@@ -1,0 +1,149 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://iut.fr/isParentOf">
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/GrandFather">
+    <owl:disjointWith rdf:resource="http://iut.fr/GrandMother"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Grandparents"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Male"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Male">
+    <owl:disjointWith rdf:resource="http://iut.fr/Female"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/isBrotherOf">
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Male"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Female">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/isSonOf">
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Male"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Grandparents">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Uncle">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Male"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/isDaughterOf">
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Female"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/GrandMother">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Grandparents"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Female"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Nationality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/isFatherOf">
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Male"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Child">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Parent">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Daughter">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Child"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Sister">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Sibling"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Female"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Age">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/isChildOf">
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Father">
+    <owl:disjointWith rdf:resource="http://iut.fr/Mother"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Parent"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Male"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/isMotherOf">
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Female"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Brother">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Sibling"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Male"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Sibling">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/isMarriedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Son">
+    <owl:disjointWith rdf:resource="http://iut.fr/Daughter"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Child"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/isSisterOf">
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Female"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/Mother">
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Parent"/>
+    <rdfs:subClassOf rdf:resource="http://iut.fr/Female"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iut.fr/isSiblingOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:range rdf:resource="http://iut.fr/Person"/>
+    <rdfs:domain rdf:resource="http://iut.fr/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>
